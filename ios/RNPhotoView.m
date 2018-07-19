@@ -396,7 +396,7 @@
         _loadingImageView = [[UIImageView alloc] initWithImage:_loadingImage];
         _loadingImageView.center = self.center;
         _loadingImageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
-        _loadingImageView.backgroundColor = [UIColor clearColor];
+        _loadingImageView.backgroundColor = [UIColor whiteColor];
         [_tapView addSubview:_loadingImageView];
     }
 }
@@ -413,7 +413,7 @@
     _maxZoomScale = 5.0;
 
     // Setup
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor whiteColor];
     self.delegate = self;
     self.decelerationRate = UIScrollViewDecelerationRateFast;
     self.showsVerticalScrollIndicator = YES;
@@ -423,12 +423,12 @@
     _tapView = [[MWTapDetectingView alloc] initWithFrame:self.bounds];
     _tapView.tapDelegate = self;
     _tapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    _tapView.backgroundColor = [UIColor clearColor];
+    _tapView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_tapView];
 
     // Image view
     _photoImageView = [[MWTapDetectingImageView alloc] initWithFrame:self.bounds];
-    _photoImageView.backgroundColor = [UIColor clearColor];
+    _photoImageView.backgroundColor = [UIColor whiteColor];
     _photoImageView.contentMode = UIViewContentModeCenter;
     _photoImageView.tapDelegate = self;
     [self addSubview:_photoImageView];
